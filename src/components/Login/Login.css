@@ -1,0 +1,99 @@
+body,
+div,
+p,
+form,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+.LoginWrap {
+  background-image: url('../../assets/san-francisco-1258848_1920.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.LogoTitle {
+  margin-top: 35vh;
+  font-size: 10vw;
+  font-weight: bold;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+
+.LogoTxt {
+  font-size: 2vw;
+  text-transform: none;
+}
+
+.Login {
+  margin-top: 30vh;
+  width: 25vw;
+  height: 38vh;
+  background-color: whitesmoke;
+  border-radius: 1vw;
+  box-shadow: 0 0 0.3rem 0.2rem rgba(0, 0, 0, 0.267);
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+}
+
+.FormTitle {
+  padding: 2vh 5vw;
+  font-size: 1.1vw;
+  color: whitesmoke;
+  background-color: #232b4b;
+  margin-bottom: 2vw;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Input,
+.Button {
+  width: 17vw;
+  padding: 1.3vh 1vw;
+  font-size: 1vw;
+  margin: 0.5vw auto;
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.7);
+  border-radius: 0.2vw;
+  background: white;
+}
+
+.Button {
+  text-transform: uppercase;
+  font-size: 1.1vw;
+  color: white;
+  background: linear-gradient(to bottom, rgba(251, 65, 115, 0.856) 0%, rgba(251, 65, 115, 0.801) 60%, rgba(251, 65, 115, 0.87) 53%, rgba(210, 75, 91, 0.836) 53%, rgba(251, 65, 115, 0.808) 53%);
+  margin-top: 2vh;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.Button:hover {
+  box-shadow: rgba(0, 6, 8, 0.35) 0px 9px 5px 0px;
+}
+
+.Feedback {
+  color: red;
+  font-size: 0.9vw;
+  height: 1vh;
+}
+
+@media only screen and (max-width: 1024px) {
+  .Login {
+    height: 30vh;
+  }
+}

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = `http://localhost:3001`;
+const url = `http://localhost:3306`;
 const headers = { 'Content-Type': 'application/json' };
 
 const getFromDatabase = async (query) => {
