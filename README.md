@@ -43,7 +43,3 @@ npm run start
 ```sh
 yarn start
 ```
-> 7. LOGIN as administrator
-```sh
-username: admin, password: admin
-```
