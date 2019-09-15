@@ -5,9 +5,9 @@ import Login from './components/Login/Login';
 import Main from './components/Main';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUsers, faComments } from '@fortawesome/free-solid-svg-icons';
+import { faUsers, faComments, faTrashAlt, faEdit } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faUsers, faComments);
+library.add(faUsers, faComments, faTrashAlt, faEdit);
 
 class App extends Component {
   state = {

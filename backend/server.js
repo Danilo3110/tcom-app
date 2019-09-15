@@ -26,6 +26,6 @@ connection.on('error', (err) => {
 });
 
 require('./routes/route')(app, express, connection);
-app.listen(3306, () => {
-  console.log('Server listening on port 3306');
+app.listen(3001, () => {
+  console.log('Server listening on port 3001');
 });

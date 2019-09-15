@@ -14,8 +14,8 @@ module.exports = function (app, express, mysqlConnection) {
       });
     })
     .post(verifyToken, (req, res) => {
-      mysqlConnection.query('INSERT INTO users (name, username, password, user_type, photo) values (?,?,?,?,?)',
-        [req.body.name, req.body.username, req.body.password, req.body.user_type, req.body.photo], function (error, results) {
+      mysqlConnection.query('INSERT INTO users (name, username, password, user_type, photo_url) values (?,?,?,?,?)',
+        [req.body.name, req.body.username, req.body.password, req.body.user_type, req.body.photo_url], function (error, results) {
           if (error) throw error;
           return res.send({ error: false, data: results, message: 'Successfully added new user', user: req.user });
         });
