@@ -33,7 +33,7 @@ module.exports = function (app, express, mysqlConnection) {
     .patch(verifyToken, (req, res) => {
       mysqlConnection.query("UPDATE users SET ? WHERE id = ?", [req.body, req.params.id], function (error, results) {
         if (error) throw error;
-        return res.send({ error: false, data: results, message: 'Accommodation has been patched successfully.', user: req.user });
+        return res.send({ error: false, data: results, message: 'User has been patched successfully.', user: req.user });
       });
     })
     .delete(verifyToken, (req, res) => {

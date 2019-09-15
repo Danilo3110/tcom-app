@@ -51,7 +51,6 @@ class Users extends Component {
         const isEmpty = Object.values(newUser).every(input => (input !== ''));
         if (isEmpty) {
             // this.setState(prevState=>({ users: [newUser, ...prevState.users]}));
-            console.log(newUser);
             (async () => {
                 await postToDatabase('/users', newUser);
                 this.setState({ showAll: true });
@@ -88,7 +87,6 @@ class Users extends Component {
 
     getUserForUpdate = (id) => {
         const selectedUser = this.state.usersAll.find(user => user.id === id);
-        console.log(selectedUser);
         this.setState({updateId: id, userEdit: selectedUser});
         
         document.querySelector('#name').value = selectedUser.name;
