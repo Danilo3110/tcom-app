@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom';
 import classes from './Login.css';
 import setAuthToken from '../../utils/setAuthToken';
 import jwt from 'jsonwebtoken';

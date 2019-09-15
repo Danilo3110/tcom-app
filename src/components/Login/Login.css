@@ -72,6 +72,10 @@ input {
   background: white;
 }
 
+.Input:focus {
+  outline: thin auto #232b4b8e;
+}
+
 .Button {
   text-transform: uppercase;
   font-size: 1.1vw;

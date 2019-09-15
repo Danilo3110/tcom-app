@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import jwt from 'jsonwebtoken';
 import Login from './components/Login/Login';
+import Main from './components/Main';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { } from '@fortawesome/free-solid-svg-icons';
+import { faUsers, faComments } from '@fortawesome/free-solid-svg-icons';
 
-library.add();
+library.add(faUsers, faComments);
 
 class App extends Component {
   state = {
@@ -32,12 +33,16 @@ class App extends Component {
 
   render() {
     console.log(this.state.loggedUser);
+    const user = {...this.state.loggedUser};
     return (
       <div className={classes.App}>
         <Router>
           <Switch>
             <Route exact path="/" render={
               (props) => <Login {...props} loginStatus={this.LoginStatus} loggedUser={this.loggedUser}/>
+            }/>
+            <Route path="/home" render={
+              () => <Main loginStatus={this.LoginStatus} {...user}/>
             }/>
             <Route path="*" component={() => ':( Error 404, page not found'}/>
           </Switch>
