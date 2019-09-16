@@ -128,7 +128,7 @@ class Users extends Component {
                     <div>password: {user.password}</div>
                     <span>{user.user_type}
                     <FontAwesomeIcon onClick={() => this.deleteHandler(user.id)} icon="trash-alt" size="lg" style={{color: "red", cursor: "pointer", paddingLeft: "1vw"}}/>
-                    <FontAwesomeIcon onClick={() => this.getUserForUpdate(user.id)} icon={['fas', 'edit']} size="lg" style={{color: "lightgreen", cursor: "pointer", paddingLeft: "1vw"}}/>
+                    <FontAwesomeIcon onClick={() => { this.getUserForUpdate(user.id); this.myInp.focus();}} icon={['fas', 'edit']} size="lg" style={{color: "lightgreen", cursor: "pointer", paddingLeft: "1vw"}}/>
                     </span>
                 </div>
             )
@@ -138,7 +138,7 @@ class Users extends Component {
             <div className={classes.Users}>
                 <h2>Create new user</h2>
                 <form id="addUser">
-                    <input className={classes.UsersInputText} onBlur={this.inputHandler} type="text" name="name" id="name" placeholder="Enter name" />
+                    <input ref={(ip) => this.myInp = ip} className={classes.UsersInputText} onBlur={this.inputHandler} type="text" name="name" id="name" placeholder="Enter name" />
                     <input className={classes.UsersInputText} onBlur={this.inputHandler} type="text" name="username" id="username" placeholder="Enter username" />
                     <input className={classes.UsersInputText} onBlur={this.inputHandler} type="password" name="password" id="password" placeholder="Enter password" />
                     <h4>Administrator privileges:</h4>
